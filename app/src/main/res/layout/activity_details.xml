@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/fra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:elevation="2dp"
+                    android:background="@drawable/bg_frame" />
+
+                <ImageView
+                    android:id="@+id/imgDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/maxresdefault"/>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:elevation="2dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bg_frame_bottom" />
+            </FrameLayout>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarDetails"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="top">
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/play"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="52dp"
+                    android:src="@drawable/ic_play_circle_filled_black_24dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/cont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="30dp"
+                    android:padding="10dp"
+                    android:layout_below="@id/play"
+                    app:layout_anchorGravity="bottom">
+
+                    <ImageView
+                        android:id="@+id/ivShowPoster"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/poster"
+                        app:srcCompat="@drawable/bladerunnerfinal" />
+
+                    <TextView
+                        android:id="@+id/tvShowTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/ivShowPoster"
+                        android:fontFamily="sans-serif-black"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        tools:text="Fantastic Beasts And Where To Find Them" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_below="@+id/fra">
+
+            <RelativeLayout
+                android:id="@+id/ffp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/popularity" />
+
+                <TextView
+                    android:id="@+id/tvShowPopularity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/textView"
+                    android:textColor="@color/greenAccent"
+                    tools:text="_pri_" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="false"
+                    android:layout_toStartOf="@id/tvShowReleaseDate"
+                    android:text="@string/release_date" />
+
+                <TextView
+                    android:id="@+id/tvShowReleaseDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/_12_jan_2019"
+                    android:textColor="@color/greenAccent" />
+            </RelativeLayout>
+
+
+            <!-- oifninofw -->
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/ffp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/white" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:isIndicator="true"
+                android:numStars="10"
+                android:layout_below="@id/view2"
+                android:progressTint="@color/greenAccent" />
+
+            <TextView
+                android:id="@+id/tvShowOverview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ratingBar"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                tools:text="Simba idolises his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub's arrival. Scar, Mufasa's brother—and former heir to the throne—has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba's exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his." />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tvShowOverview"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:layout_marginBottom="10dp"
+                android:text="Similar movies"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSimilar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/textView2" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>
